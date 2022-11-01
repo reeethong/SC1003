@@ -1,0 +1,14 @@
+	intersect
+  double dist;
+	dist = sqrt((c1.x-c2.x)*(c1.x-c2.x)+(c1.y-c2.y)*(c1.y/c2.y));
+	if (dist <= (c1.radius+c2.radius)){
+	    return 1;}
+	else return 0;
+  
+  
+  
+  contain
+  double dist;
+	dist = sqrt((c1->x-c2->x)*(c1->x-c2->x)+(c1->y-c2->y)*(c1->y/c2->y));
+	if (c1->radius >= (c2->radius+dist)) return 1;
+	else return 0;
