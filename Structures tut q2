@@ -1,0 +1,25 @@
+compute 1
+   if (expr.op == '+')
+   return expr.operand1 + expr.operand2;
+   else if (expr.op == '-')
+   return expr.operand1 - expr.operand2;
+   else if (expr.op == '*')
+   return expr.operand1 * expr.operand2;
+   else if (expr.op == '/')
+   return expr.operand1 / expr.operand2;
+   else
+   return 0;
+
+
+
+compute 2
+if (expr.op == '+')
+   return expr.operand1 + expr.operand2;
+   else if (expr.op == '-')
+   return expr.operand1 - expr.operand2;
+   else if (expr.op == '*')
+   return expr.operand1 * expr.operand2;
+   else if (expr.op == '/')
+   return expr.operand1 / expr.operand2;
+   else
+   return 0;
