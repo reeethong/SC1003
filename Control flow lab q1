@@ -1,0 +1,13 @@
+int id=0, mark=0;
+   
+   while (id != -1){
+       printf("Enter Student ID: \n");
+       scanf("%d",&id);  //fgets is only for string input
+       printf("Enter Mark: \n");
+       scanf("%d", &mark);
+       if (mark>=75) printf("Grade = A\n");
+       else if (mark>=65 && mark<=74) printf("Grade = B\n"); // cannot use 65<=x<=74
+       else if (mark>= 55 && mark<=64) printf("Grade = C\n");
+       else if (mark>= 45 && mark<=54) printf("Grade = D\n"); 
+       else printf("Grade = F\n");
+}
