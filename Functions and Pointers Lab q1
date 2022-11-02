@@ -1,0 +1,13 @@
+int j=0;
+   while(num>=1){
+       num = num/10;
+   j++;
+   }
+return j;
+
+
+
+   while(num>=1){
+       num = num/10;
+   (*result)++;
+   }
