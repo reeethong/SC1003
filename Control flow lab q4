@@ -1,0 +1,9 @@
+float x,sum1=1.0;
+   int y,fact=1;
+   printf("Enter x: \n");
+   scanf("%f", &x);
+   for (y=1;y<=10;y++){
+       fact = fact*y;
+   sum1 = sum1 + pow(x,y)/fact;
+   }
+printf("Result = %.2f", sum1);
