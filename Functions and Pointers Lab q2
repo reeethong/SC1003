@@ -1,0 +1,22 @@
+/* call by value*/
+   int k=0;
+    while (num>=1){
+    if ((num%10) != digit){
+        k++;
+        num = num/10;}
+    else
+    return ++k;
+    }
+    return 0;
+    
+    
+// call by ref
+   int l=0;
+   while (num>0){
+       l++;
+        if ((num%10) == digit){
+            (*result) = l;
+            break;
+        }
+    num/=10;
+}
