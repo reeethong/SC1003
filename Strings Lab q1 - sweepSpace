@@ -1,0 +1,6 @@
+int x,y=0;
+    for (x=0; str[x] != '\0'; x++){
+    if (str[x] != ' ')  str[y++] = str[x];
+}
+str[y] = '\0';
+return str;
