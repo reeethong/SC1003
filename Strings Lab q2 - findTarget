@@ -1,0 +1,25 @@
+printNames()
+int i;
+   for (i=0;i<size;i++){
+       printf("%s \n", nameptr[i]);
+   }
+
+
+readNames()
+printf("Enter size: \n");
+   scanf("%d", size);
+   printf("Enter %d names: \n", *size);
+   int h;
+   for (h=0;h<*size;h++){
+       scanf("%s", nameptr[h]);
+   }
+   
+   
+   findTarget()
+   int j,k=0;
+   for (j=0;j<size;j++){
+       if (strcmp(target, nameptr[j]) == 0)
+       return k;
+       k++;
+   }
+return -1;
