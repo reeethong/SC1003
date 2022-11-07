@@ -11,7 +11,7 @@ printf("Enter size: \n");
    printf("Enter %d names: \n", *size);
    int h;
    for (h=0;h<*size;h++){
-       scanf("%s", nameptr[h]);
+       scanf("%s", nameptr[h]);       //why cannot use fgets(nameptr[h], 80, stdin); ???
    }
    
    
