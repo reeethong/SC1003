@@ -1,0 +1,11 @@
+int i;
+   int j;
+   int len;
+   len = strlen(str);
+   for (i=0;i<(len/2);i++){
+       if (*(str+i) == *(str+len-i-1))
+       j=1;
+       else
+       j=0;
+   } 
+return j;
