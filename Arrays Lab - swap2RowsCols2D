@@ -1,0 +1,17 @@
+// Swap 2 rows
+int i,j;
+   int temp;
+   for (i=0;i<SIZE;i++){
+        temp = ar[r1][i];
+        ar[r1][i] = ar[r2][i];
+        ar[r2][i] = temp;
+       }
+   
+//swap 2 columns
+int i,j;
+   int temp;
+    for (i=0;i<SIZE;i++){
+        temp = ar[i][c1];
+        ar[i][c1] = ar[i][c2];
+        ar[i][c2] = temp;
+}
