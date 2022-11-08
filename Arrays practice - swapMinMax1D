@@ -1,0 +1,12 @@
+int i,j=0,k=0,l;
+  int min = 999;
+  int max = -999;
+  for (i=0;i<size;i++){
+      if (ar[i]<=min){ min = ar[i];
+      j=i;}
+      if (ar[i]>=max){ max = ar[i];
+      k=i;}
+  }
+  l = ar[j];
+  ar[j] = ar[k];
+  ar[k] = l;
