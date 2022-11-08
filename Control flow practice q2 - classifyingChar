@@ -1,0 +1,7 @@
+char i;
+   printf("Enter a character: \n");
+   scanf("%c", &i); //needs to save as  a char then printf as a %d
+   if (i>=48 && i<=57) printf("Digit\n");
+   else if (i>=65 && i<=90) printf("Upper case letter\n");
+   else if (i>=97 && i<= 122) printf("Lower case letter\n");
+   else printf("Other character\n");
