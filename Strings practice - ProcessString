@@ -1,0 +1,8 @@
+int i,j;
+	*totVowels = 0;
+	*totDigits = 0;
+	for (i=0;i<strlen(str);i++){
+	    if (str[i] == 'a' || str[i] == 'e' || str[i] == 'i' || str[i] == 'o' || str[i] == 'u') (*totVowels)++;
+	    else if (str[i] == 'A' || str[i] == 'E' || str[i] == 'I' || str[i] == 'O' || str[i] == 'U') (*totVowels)++;
+	    else if (isdigit(str[i])) (*totDigits)++;
+	}
