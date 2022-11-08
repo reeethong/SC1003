@@ -1,0 +1,7 @@
+float i,j;
+    while (i!=-1){
+        printf("Enter the temperature in degree F: \n");
+        scanf("%f", &i);
+        j = 5*(i-32)/9;
+        printf("Converted degree in C: %.2f \n", j);
+    }
