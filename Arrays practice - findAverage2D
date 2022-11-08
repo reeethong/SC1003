@@ -1,0 +1,4 @@
+int i,j;
+   for (i=0;i<4;i++){
+    matrix[i][3] = (matrix[i][0]+matrix[i][1]+matrix[i][2])/3;
+   }
