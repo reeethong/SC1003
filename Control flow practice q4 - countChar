@@ -1,0 +1,27 @@
+char i;
+   int z;
+   int x=0,y=0;
+   printf("Enter your characters (# to end): \n");
+   while (i != '#'){
+   scanf("%c", &i);
+   if (isdigit(i)) x++;
+   else if (i == '#' || i == ' ') continue;
+   else y++;}
+printf("The number of digits: %d\n", x);
+printf("The number of letters: %d", y);
+
+
+
+//using do-while
+char i;
+   int z;
+   int x=0,y=0;
+   printf("Enter your characters (# to end): \n");
+   do {
+   scanf("%c", &i);
+   if (isdigit(i)) x++;
+   else if (i == '#' || i == ' ') continue;
+   else y++;}
+   while (i != '#');
+printf("The number of digits: %d\n", x);
+printf("The number of letters: %d", y);
