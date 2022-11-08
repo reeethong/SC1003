@@ -1,0 +1,14 @@
+// call by value
+double x_diff, y_diff, dist;
+   x_diff = x1 - x2;
+   y_diff = y1 - y2;
+   dist = sqrt(x_diff*x_diff+y_diff*y_diff);
+return dist;
+
+
+
+// call by reference
+double x_diff, y_diff, dist1;
+   x_diff = x1 - x2;
+   y_diff = y1 - y2;
+   *dist = sqrt(x_diff*x_diff+y_diff*y_diff);
