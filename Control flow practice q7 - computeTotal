@@ -1,0 +1,14 @@
+int i,j,k,l,m,n=0;
+   printf("Enter number of lines: \n");
+   scanf("%d", &i);
+   for (j=1;j<=i;j++){
+   printf("Enter line %d: \n", j);
+   scanf("%d", &k); //will only scan first number of when input with spacing
+   for (l=0;l<k;l++){
+       scanf("%d", &m);
+       n+=m;
+   }
+   
+   printf("Total: %d\n", n);
+n=0;
+}
