@@ -1,0 +1,16 @@
+int max=0,i,j;
+if (x>y) max=x;
+else max=y;
+if (y>z) max =y;
+else max =z;
+if (z>x) max=z;
+else max=x;
+for (i=max;i>0;i--){
+    if (x>=i) printf("*");
+    else printf(" ");
+    if (y>=i) printf("*");
+    else printf(" ");
+    if (z>=i) printf("*");
+    else printf(" ");
+    printf("\n");
+}
