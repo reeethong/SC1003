@@ -1,0 +1,144 @@
+#include <stdio.h>
+#include <string.h>
+typedef struct
+{
+  int roomID;
+  int status;
+  char customerName[20];
+} Room;
+int rooms_occ = 0;
+#define MAX 5 
+void listOccupiedRooms(Room *rm);
+void assignRoom(Room *rm);
+void removeRoom(Room *rm);
+void findCustomer(Room *rm, char *search);
+
+int main(){
+  Room rm[MAX];
+  char search[20], *p;
+  int choice;
+  char dummychar;
+  
+  printf("NTU HOTEL ROOM RESERVATION PROGRAM: \n");
+  printf("1: listOccupiedRooms()\n");
+  printf("2: assignRoom()\n");
+  printf("3: removeRoom()\n");
+  printf("4: findCustomer()\n");
+  printf("5: quit\n");
+ 
+  do {
+    printf("Enter your choice: \n");
+    scanf("%d", &choice);
+    switch (choice) {
+      case 1:
+      scanf("%c", &dummychar);
+      printf("listOccupiedRooms(): \n");
+      listOccupiedRooms(rm);
+      break;
+      case 2:
+        scanf("%c", &dummychar);
+        printf("assignRoom(): \n");
+        assignRoom(rm);
+        break;
+      case 3:
+        scanf("%c", &dummychar);
+        printf("removeRoom(): \n");
+        removeRoom(rm);
+        break;
+      case 4:
+      scanf("%c", &dummychar);
+      printf("findCustomer(): \n");
+      printf("Enter customer name: \n");
+      fgets(search, 20, stdin);
+      if (p=strchr(search,'\n')) *p = '\0';
+      findCustomer(rm,search);
+      break;
+    }}
+    while (choice < 5);
+    return 0;
+  }
+  
+  
+  
+  //function definitions
+  void listOccupiedRooms(Room *rm){
+    int i,j;
+    if (rooms_occ==0) printf("The hotel is empty\n");
+    else {
+        for (i=1;i<=MAX;i++){
+            for (j=0;j<MAX;j++){
+                if ((rm+j)->roomID == i){
+                printf("roomID: %d\n", (rm+j)->roomID);
+                printf("customer name: %s\n", (rm+j)->customerName);
+        }}
+    }
+}}
+
+void assignRoom(Room *rm)
+{
+    int i,enteredid;
+    char *p, dummy[80];
+    if (rooms_occ == 5) {
+        printf("The hotel is full \n");
+        return 0;
+    }
+    
+printf("Enter a roomID between 1 and 5: \n");
+scanf("%d", &enteredid);
+while (enteredid < 1 || enteredid > 5) {
+    printf("Enter a roomID between 1 and 5: \n");
+    scanf("%d", &enteredid);
+}
+for (i=0;i<rooms_occ;i++,rm++){
+while (rm->roomID == enteredid){
+    printf("Occupied! Enter another roomID \n");
+    printf("Enter a roomID between 1 and 5: \n");
+    scanf("%d", &enteredid);
+}}
+
+rm->roomID = enteredid;
+fgets(dummy, 80, stdin);
+printf("Enter customer name: \n");
+fgets(rm->customerName,80,stdin);
+if (p=strchr(rm->customerName,'\n')) *p = '\0';
+
+printf("The room has been assigned successfully \n");
+rooms_occ++;
+return 0;
+}
+
+void removeRoom(Room *rm){
+    char nullStr[20] = "\0";
+    int i,x,y=0;
+    if (rooms_occ == 0) printf("All the rooms are empty \n");
+    else{
+        while (!y){
+        printf("Enter a roomID between 1 and 5: \n");
+        scanf("%d", &x);
+        while (x<1 || x>5){
+        printf("Enter a roomID between 1 and 5: \n");
+        scanf("%d", &x);
+        }
+        for (i=0;i<MAX;i++){
+        if ((rm+i)->roomID == x) {
+            (rm+i)->roomID = 0;
+            strcpy((rm+i)->customerName,nullStr);
+            printf("Removal is successful \n");
+            rooms_occ--;
+            y = 1;
+        }}
+        if (!y) printf("Empty! Enter another roomID for removal \n");
+}}}
+
+void findCustomer(Room *rm, char *search){
+    int i,j;
+    for (i=1;i<=rooms_occ;i++){
+            for (j=0;j<MAX;j++){
+                if (strcasecmp((rm+i)->customerName,search)==0){
+                printf("The target customer name is found \n");
+                printf("roomID: %d\n", (rm+i)->roomID);
+                printf("customer name: %s\n",(rm+i)->customerName);
+                return 0;
+}}
+    if (i==rooms_occ) printf("The target customer name is not found \n");
+}}
